@@ -1,0 +1,88 @@
+.home-container {
+	background: rgba(0, 0, 0, 0.1);
+	height: 100vh;
+	min-height: 500px;
+	width: 100vw;
+	min-width: 250px;
+}
+
+#background-video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: static;
+	z-index: -1;
+}
+
+.homepage-nav-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: absolute;
+	min-width: 250px;
+}
+
+.desktop-nav-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.sidenav-wrapper {
+	display: flex;
+	flex-direction: column;
+	a {
+		padding: 25px 1.5rem;
+		color: white;
+		font-size: 1.3rem;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: gray;
+	}
+}
+
+.social-navigation-container {
+	margin-right: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.social-svg-icon {
+	cursor: pointer;
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.social-svg-icon path,
+.social-svg-icon polygon,
+.social-svg-icon rect {
+	fill: white;
+
+	&hover {
+		fill: gray;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.homepage-nav-container {
+		justify-content: flex-end !important;
+	}
+
+	.desktop-nav-wrapper {
+		text-shadow: black 0px 0px 10px;
+	}
+
+	#mobile-nav {
+		display: block;
+	}
+
+	#background-video {
+		padding-top: 100px;
+	}
+}
